@@ -1,3 +1,7 @@
+import ProfileList from './ProfileList';
+import user from '../../src/user.json';
+import Section from './Section';
+
 export const App = () => {
   return (
     <div
@@ -7,10 +11,12 @@ export const App = () => {
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101'
+        color: '#010101',
       }}
     >
-      React homework template
+      <Section>
+        <ProfileList items={user} />
+      </Section>
     </div>
   );
 };

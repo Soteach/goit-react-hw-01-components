@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 export default function markup({ username, tag, location, avatar, stats }) {
   return (
     <div class="profile">
@@ -26,9 +27,9 @@ export default function markup({ username, tag, location, avatar, stats }) {
   );
 }
 
-// Profile.propTypes = {
-//   username: PropTypes.string.isRequired,
-//   title: PropTypes.string.isRequired,
-//   location: PropTypes.string.isRequired,
-//   avatar: PropTypes.string.isRequired,
-// };
+markup.propTypes = {
+  username: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+};

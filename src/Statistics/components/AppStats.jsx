@@ -1,3 +1,9 @@
-// export const AppStats = () => {
-//   return <div>App</div>;
+// function AppStats() => {
+//   return (
+//     <div>
+//       <StatList></StatList>
+//     </div>
+//   );
 // };
+
+// export default AppStats;

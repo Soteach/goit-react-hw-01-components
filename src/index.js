@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { App } from 'Profile/Components/App';
 import './index.css';
-import AppStats from 'Statistics/components/StatMain/StatMain';
+import App from './App';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    ( <App />,
-    <AppStats />)
+    ( <App />)
   </React.StrictMode>
 );

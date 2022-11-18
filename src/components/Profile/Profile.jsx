@@ -1,32 +1,44 @@
-import './profile.css';
 import PropTypes from 'prop-types';
+import {
+  Card,
+  Description,
+  Name,
+  Tag,
+  Avatar,
+  Location,
+  Stats,
+  StatsItem,
+  Quantity,
+  Value,
+} from './Profile.styled';
 
-function Profile({ username, tag, location, avatar }) {
+function Profile({ user, tag, location, avatar, stats }) {
   return (
     <>
-      <div class="profile">
-        <div class="description">
-          <img src={avatar} alt="{User avatar}" class="avatar" />
-          <p class="name">Petra Marica</p>
-          <p class="tag">@pmarica</p>
-          <p class="location">Salvador, Brasil</p>
-        </div>
+      <Card>
+        <Description>
+          <Avatar src={avatar} />
+          <Name>{user}</Name>
+          <Tag>{tag}</Tag>
+          <Location>{location}</Location>
+        </Description>
 
-        <ul class="stats">
-          <li>
-            <span class="label">Followers</span>
-            <span class="quantity">1000</span>
-          </li>
-          <li>
-            <span class="label">Views</span>
-            <span class="quantity">2000</span>
-          </li>
-          <li>
-            <span class="label">Likes</span>
-            <span class="quantity">3000</span>
-          </li>
-        </ul>
-      </div>
+        <Stats>
+          <StatsItem>
+            <Quantity>Followers</Quantity>
+            {/* {Object.keys(stats)[0]} */}
+            <Value>{stats.followers}</Value>
+          </StatsItem>
+          <StatsItem>
+            <Quantity>Views</Quantity>
+            <Value>{stats.views}</Value>
+          </StatsItem>
+          <StatsItem>
+            <Quantity>Likes</Quantity>
+            <Value>{stats.likes}</Value>
+          </StatsItem>
+        </Stats>
+      </Card>
     </>
   );
 }
@@ -34,8 +46,8 @@ function Profile({ username, tag, location, avatar }) {
 export default Profile;
 
 Profile.propTypes = {
-  username: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  user: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
+  stats: PropTypes.object.isRequired,
 };

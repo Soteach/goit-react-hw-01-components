@@ -38,42 +38,13 @@ export const StatItem = styled.li`
   border-bottom-right-radius: 8px;
 `;
 
-// .item {
-//     display: flex;
-//     width: 100%;
-//     flex-direction: column;
-//     padding: 16px;
-//     border: 1px solid gray;
-// }
+export const Label = styled.span`
+  text-align: center;
+`;
 
-// .item:first-child {
-//     background-color: rgb(23, 207, 207);
-//     border-left: none;
-//     border-bottom-left-radius: 20px;
-// }
-
-// .item:last-child {
-//     background-color: rgb(104, 194, 104);
-//     border-bottom-right-radius: 20px;
-// }
-
-// .item:nth-child(2) {
-//     background-color: rgb(164, 84, 164);
-// }
-
-// .item:nth-child(4) {
-//     background-color: rgb(159, 119, 45);
-//     border-right: none;
-
-// }
-
-// .label {
-//     text-align: center;
-// }
-
-// .percentage {
-//     font-weight: bold;
-//     text-align: center;
-//     line-height: 1.5;
-//     font-size: 16px;
-// }
+export const Percentage = styled.span`
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 16px;
+`;

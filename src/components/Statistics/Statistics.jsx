@@ -1,5 +1,12 @@
 import PropTypes from 'prop-types';
-import { Card, StatName, StatList, StatItem } from './Statistics.styled';
+import {
+  Card,
+  StatName,
+  StatList,
+  StatItem,
+  Label,
+  Percentage,
+} from './Statistics.styled';
 
 function Statistics({ stats }) {
   return (
@@ -10,8 +17,8 @@ function Statistics({ stats }) {
         <StatList>
           {stats.map(({ id, label, percentage }) => (
             <StatItem key={id}>
-              <span class="label">{label}</span>
-              <span class="percentage">{percentage}</span>
+              <Label>{label}</Label>
+              <Percentage>{percentage}</Percentage>
             </StatItem>
           ))}
         </StatList>

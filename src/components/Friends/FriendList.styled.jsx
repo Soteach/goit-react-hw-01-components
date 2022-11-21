@@ -11,11 +11,10 @@ export const FriendL = styled.ul`
 export const FriendItem = styled.li`
   display: flex;
   align-items: center;
-  border: 1px solid black;
   background-color: white;
   border-radius: 5px;
   padding: 10px;
-  box-shadow: 1px 1px 2px 2px rgb(209, 204, 204);
+  box-shadow: 8px 8px 20px -6px rgba(212, 175, 55, 0.6);
   margin-bottom: 8px;
 `;
 
@@ -29,6 +28,7 @@ export const Header = styled.h2`
 
 export const Name = styled.p`
   font-weight: 700;
+  margin-left: 8px;
 `;
 
 export const Chip = styled.span`
@@ -36,27 +36,17 @@ export const Chip = styled.span`
   width: 12px;
   height: 12px;
   background-color: ${props => {
-    switch (props.eventType) {
+    switch (props.status) {
       case 'isOnline':
         return `#4caf50`;
-      case 'IsOffline':
-        return `red`;
       default:
-        return '#000';
+        return '#f44336';
     }
   }};
 `;
 
 export const Avatar = styled.img`
   margin: 0px 10px;
-  border: 2px solid orange;
+  border: 2px solid #e7a61a;
   border-radius: 50%;
 `;
-
-// .avatar {
-//     margin: 0px 10px;
-// }
-
-// .name {
-//     margin: 0px 10px;
-// }

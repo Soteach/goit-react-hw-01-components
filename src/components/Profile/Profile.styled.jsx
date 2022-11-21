@@ -7,11 +7,11 @@ export const Card = styled.div`
   max-width: 360px;
   border-radius: 5px;
   position: relative;
-  box-shadow: 1px 1px 2px 2px rgb(163, 160, 160);
+  box-shadow: 8px 8px 20px -6px rgba(212, 175, 55, 0.6);
 `;
 
 export const Avatar = styled.img`
-  border: 3px solid gray;
+  border: 3px solid ${props => props.theme.colors.gray};
   border-radius: 50%;
   width: 30%;
   margin-top: 16px;
@@ -51,7 +51,7 @@ export const Stats = styled.ul`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #3e89b1;
+  background-color: ${props => props.theme.colors.profileBkgColor};
   padding: 16px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -63,7 +63,6 @@ export const StatsItem = styled.li`
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-  border-top: 1px solid gray;
 `;
 
 export const Quantity = styled.span`

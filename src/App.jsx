@@ -6,6 +6,7 @@ import '../src/app.css';
 import profile from './data/user.json';
 import stats from './data/data.json';
 import friends from './data/friends.json';
+import transactions from './data/transactions.json';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
       />
       <Statistics stats={stats} />
       <FriendList friends={friends} />
-      <TransactionHistory />
+      <TransactionHistory transactions={transactions} />
     </>
   );
 }

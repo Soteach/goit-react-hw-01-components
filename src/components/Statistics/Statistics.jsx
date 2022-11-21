@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { getRandomColor } from '../../utils/getRandomColor';
 import {
   Card,
   StatName,
@@ -13,10 +14,9 @@ function Statistics({ stats }) {
     <>
       <Card>
         <StatName>Upload stats</StatName>
-
         <StatList>
           {stats.map(({ id, label, percentage }) => (
-            <StatItem key={id}>
+            <StatItem key={id} color={getRandomColor()}>
               <Label>{label}</Label>
               <Percentage>{percentage}</Percentage>
             </StatItem>

@@ -6,10 +6,14 @@ export const theme = Object.freeze({
     red: '#f44336',
     blue: '#2196f3',
     gray: '#777f8c',
+    gold: '#facf42',
+    orange: '#e7a61a',
+    purple: '#861c86',
+    softWhite: '#FBFAF5',
     primaryText: '#212121',
+    profileBkgColor: '#3e89b1',
     secondaryText: '#757575',
-    descrBkgColor: 'rgba(214, 226, 43, 0.616)',
+    descrBkgColor: '#d6e22b',
+    statBkgColor: '#d4af37',
   },
 });
-
-//

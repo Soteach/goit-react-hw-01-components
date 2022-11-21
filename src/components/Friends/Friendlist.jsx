@@ -13,9 +13,9 @@ function FriendList({ friends }) {
     <>
       <FriendL>
         <Header>Friendlist</Header>
-        {friends.map(({ avatar, name, type, id }) => (
+        {friends.map(({ avatar, name, isOnline, id }) => (
           <FriendItem key={id}>
-            <Chip eventType={type}>{type}</Chip>
+            <Chip status={isOnline ? 'isOnline' : ''}></Chip>
             {/* className={friend.isOnline ? css.itemOnline : css.itemOffline} */}
             <Avatar src={avatar} alt="User avatar" width="48" />
             <Name>{name}</Name>

@@ -1,21 +1,40 @@
 import PropTypes from 'prop-types';
-import { FriendItem } from './FriendList.styled';
+import {
+  FriendItem,
+  FriendL,
+  Header,
+  Chip,
+  Avatar,
+  Name,
+} from './FriendList.styled';
 
 function FriendList({ friends }) {
   return (
     <>
-      <FriendList>
-        <h2>Friendlist</h2>
-        {friends.map(({ avatar, name, isOnline, id }) => (
+      <FriendL>
+        <Header>Friendlist</Header>
+        {friends.map(({ avatar, name, type, id }) => (
           <FriendItem key={id}>
-            <span class="status">{isOnline}</span>
-            <img class="avatar" src={avatar} alt="User avatar" width="48" />
-            <p class="name">{name}</p>
+            <Chip eventType={type}>{type}</Chip>
+            {/* className={friend.isOnline ? css.itemOnline : css.itemOffline} */}
+            <Avatar src={avatar} alt="User avatar" width="48" />
+            <Name>{name}</Name>
           </FriendItem>
         ))}
-      </FriendList>
+      </FriendL>
     </>
   );
 }
 
 export default FriendList;
+
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+      id: PropTypes.number.isRequired,
+    })
+  ),
+};

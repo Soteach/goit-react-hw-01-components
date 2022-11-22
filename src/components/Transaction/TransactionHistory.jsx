@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { Table, Tbody, Thead, Th, Td, Tr } from './TransactionHistory.styled';
+
 function TransactionHistory({ transactions }) {
   return (
     <>

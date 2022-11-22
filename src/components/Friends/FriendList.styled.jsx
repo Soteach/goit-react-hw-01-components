@@ -37,8 +37,10 @@ export const Chip = styled.span`
   height: 12px;
   background-color: ${props => {
     switch (props.status) {
-      case 'isOnline':
-        return `#4caf50`;
+      case 'Online':
+        return '#4caf50';
+      case 'Offline':
+        return '#f44336';
       default:
         return '#f44336';
     }
